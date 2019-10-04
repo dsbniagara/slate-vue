@@ -1,3 +1,3 @@
 # @dsbn/slate-vue
 
-A design system specifically for Vue.js app development at DSBN
+**@dsbn/slate-vue** is a vue ui library built on top of **@dsbn/slate-css**
