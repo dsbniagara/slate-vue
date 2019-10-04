@@ -1,0 +1,41 @@
+{
+  "name": "@dsbn/slatevue",
+  "version": "0.0.1",
+  "description": "A vue ui library app development",
+  "repository": "https://github.com/dsbniagara/slatevue",
+  "main": "build/slate.min.js",
+  "style": "build/slate.min.css",
+  "scripts": {
+    "build:docs": "parcel --no-cache build docs/index.html",
+    "docs": "parcel --port=1235 --no-cache docs/index.html",
+    "build": "npm run prepublishOnly",
+    "prepublishOnly": "parcel build ./src/build.js --no-cache --out-dir build --out-file slate.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "autoprefixer": "^9.6.1",
+    "highlight.js": "^9.15.9",
+    "parcel-bundler": "^1.12.3",
+    "postcss-color-function": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-modules": "^1.4.1",
+    "postcss-nested": "^4.1.2",
+    "sass": "^1.23.0",
+    "throttle-debounce": "^2.1.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "@dsbn/slatecss": "0.0.1",
+    "content": "^4.0.6",
+    "effects": "0.0.5",
+    "mixin": "^0.2.0",
+    "postcss-values-parser": "^3.0.5",
+    "variables": "^1.0.1",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-router": "^3.0.6",
+    "vuejs-datepicker": "^1.5.4"
+  }
+}
