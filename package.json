@@ -1,8 +1,8 @@
 {
   "name": "@dsbn/slate-vue",
   "version": "0.0.2",
-  "description": "A vue ui library app development",
-  "repository": "https://github.com/dsbniagara/slatevue",
+  "description": "Slate-vue is a Vue app component library built with @dsbn/slate-css",
+  "repository": "https://github.com/dsbniagara/slate-vue",
   "main": "src/index.js",
   "style": "build/slate.min.css",
   "scripts": {
@@ -27,7 +27,6 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "@dsbn/slatecss": "0.0.1",
     "content": "^4.0.6",
     "effects": "0.0.5",
     "mixin": "^0.2.0",

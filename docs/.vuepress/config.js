@@ -3,29 +3,24 @@ const versioning = require('./lib/versioning.js')
 module.exports = {
     postcss: {
         plugins: [
-            require('@dsbn/slatecss'),
+            require('@dsbn/slate-css'),
             require('postcss-nested',{}),
             require('postcss-color-function', {}),
         ]
     },
-    title: 'slatevue',
-    description: 'Vue UI framework',
+    title: '@dsbn/slate-vue',
+    description: 'Slate-vue is a Vue app component library built with @dsbn/slate-css',
     head: [
         ['link', {
             rel: 'icon',
             href: '/favicon.png'
-        }],
-        ['link', {
-            rel: 'stylesheet',
-            type: 'text/css',
-            href: 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,800,800i,900,900i'
-        },]
+        }]
     ],
     themeConfig: {
-        packageName: '@dsbn/slatevue',
+        packageName: '@dsbn/slate-vue',
         editLinks: true, //  "Edit this page" at the bottom of each page
         lastUpdated: 'Last Updated', //  "Last Updated" at the bottom of each page
-        repo: '-', //  Github repo
+        repo: 'https://github.com/dsbniagara/slate-vue', //  Github repo
         docsDir: 'docs/', //  Github repo docs folder    
         versions: {
             latest: versioning.versions.latest,

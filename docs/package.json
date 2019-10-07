@@ -1,7 +1,7 @@
 {
     "license": "MIT",
     "dependencies": {
-        "@dsbn/slatecss": "0.0.1",
+        "@dsbn/slate-css": "0.0.1",
         "@dsbn/slate-vue": "0.0.2",
         "fs-extra": "^7.0.1",
         "postcss": "^7.0.18",
