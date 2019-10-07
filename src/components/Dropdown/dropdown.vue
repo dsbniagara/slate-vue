@@ -28,8 +28,8 @@ export default {
     },
     computed: {
         classs() {
-            if( !this.variant) return 'btn-primary';
-            return 'btn-'+this.variant;
+            if( !this.variant) return 'btn--primary';
+            return 'btn--'+this.variant;
         }
     },
     methods: {
