@@ -1,4 +1,4 @@
-import {Slate} from '@dsbn/slate-vue'
+
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
@@ -6,7 +6,7 @@ export default ({
     router, // the router instance for the app
     siteData // site metadata
 }) => {
-    Vue.use(Slate);
+
     // Redirect to latest docs
     router.addRoutes([{
             path: '/docs/latest.html',

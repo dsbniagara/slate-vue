@@ -1,6 +1,9 @@
 const versioning = require('./lib/versioning.js')
 
 module.exports = {
+    plugins: [
+        require('./vuepressPlugin.js')
+    ],
     postcss: {
         plugins: [
             require('@dsbn/slate-css'),
