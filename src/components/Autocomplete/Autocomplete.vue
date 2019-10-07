@@ -33,7 +33,7 @@
 </template>
 <script>
 export default {
-    name: 'AutoComplete',
+    name: 'Autocomplete',
     props: {
         items: {
             type: Array,
