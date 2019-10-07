@@ -1,9 +1,9 @@
 {
   "name": "@dsbn/slate-vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A vue ui library app development",
   "repository": "https://github.com/dsbniagara/slatevue",
-  "main": "build/slate.min.js",
+  "main": "src/index.js",
   "style": "build/slate.min.css",
   "scripts": {
     "build:docs": "parcel --no-cache build docs/index.html",

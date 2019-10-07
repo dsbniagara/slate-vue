@@ -18,7 +18,7 @@
 
 <script>
 import vuejsDatepicker from 'vuejs-datepicker';
- 
+
 export default {
   components: {
     vuejsDatepicker

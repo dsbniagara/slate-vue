@@ -1,4 +1,4 @@
-import {Slate} from '../../src/index'
+import {Slate} from '@dsbn/slate-vue'
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
