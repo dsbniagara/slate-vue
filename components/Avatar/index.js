@@ -1,10 +1,10 @@
-import avatar from './avatar.vue'
+import Avatar from './Avatar.vue'
 import { registerComponents } from '../../src/utils/plugins'
 
 
 const VuePlugin = {
   install (Vue) {
-    registerComponents(Vue, {avatar})
+    registerComponents(Vue, {Avatar})
   }
 }
 

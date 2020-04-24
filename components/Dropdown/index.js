@@ -1,10 +1,10 @@
-import dropdown from './dropdown.vue'
+import Dropdown from './Dropdown.vue'
 import { registerComponents } from '../../src/utils/plugins'
 
 
 const VuePlugin = {
   install (Vue) {
-    registerComponents(Vue, {dropdown})
+    registerComponents(Vue, {Dropdown})
   }
 }
 
