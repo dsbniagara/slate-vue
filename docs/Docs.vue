@@ -2,10 +2,10 @@
 <section>
     <header class="main-header container-fluid row" x-data="{ show: false }">
         <a class="brand" href="index.html">slate-vue</a>
-        <span class="badge badge--primary">0.1.0-alpha.4</span>
+        <span class="badge badge--primary">0.1.0-alpha.5</span>
         <nav class="nav nav@xs">
             <ul class="nav-items">
-                <li class="nav-item"><router-link :to="{name:'home'}" class="nav-link">Docs</router-link></li>
+                <li class="nav-item"><router-link :to="{name:'docs'}" class="nav-link">Docs</router-link></li>
                 <li class="nav-item"><router-link :to="{name:'components'}" class="nav-link">Components</router-link></li>
             </ul>
         </nav>
