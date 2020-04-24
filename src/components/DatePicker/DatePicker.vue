@@ -12,7 +12,6 @@
     :placeholder='placeholder'
     @selected='selectDate'
     @changedMonth="changedMonth">
-    <!--:use-utc='true'-->
   </vuejsDatepicker>
 </template>
 
@@ -53,19 +52,14 @@ export default {
 </script>
 
 <style lang="postcss">
-
 .calendar.vdp-datepicker__calendar {
   width: 100%;
   border-radius: 4px;
   border: 0;
-  box-shadow: var(--shadow-up);
   padding: 1em;
   min-width: 300px;
   max-width: 400px;
 
-  &.inline {
-    box-shadow: none;
-  }
   .next,.prev,.up {
       border-radius: 34px;
       height: 34px;
@@ -164,7 +158,7 @@ export default {
         width: 100%;
         height: 100%;
         position: absolute;
-        background: var(--color-secondary);
+        background: var(--color-accent);
         z-index: -1;
         border-radius: 40px;
       }
@@ -183,13 +177,13 @@ export default {
         width: 100%;
         height: 100%;
         position: absolute;
-        background: color(var(--color-primary) l(50%));
+        background: var(--color-primary-a-50);
         z-index: -1;
         border-radius: 40px;
       }
     }
     &:not(.blank):not(.disabled).highlighted:hover {
-      background: color(var(--color-primary) l(36%));
+      background:var(--color-primary-a-30);
     }
     &.selected {
       color: #fff;
@@ -216,7 +210,7 @@ export default {
     &.highlighted {
       border-radius: 0;
       color: #fff;
-      background: color(var(--color-primary) l(36%));
+      background:var(--color-primary-a-30);
       &:hover {
         background: transparent;
       }
@@ -239,7 +233,7 @@ export default {
       }
       &.highlight-end {
         border-radius: 0 40px 40px 0;
-        background: color(var(--color-primary) l(36%));
+        background:var(--color-primary-a-30);
         &:after {
           border-radius: 40px;
           background: var(--color-primary);

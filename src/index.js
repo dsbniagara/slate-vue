@@ -1,9 +1,11 @@
+import './css/slate.css';
+
 import { vueUse } from './utils/plugins';
 
 import Autocomplete from './components/Autocomplete';
 import Dropdown from './components/Dropdown';
 import Avatar from './components/Avatar';
-import DatePicker from './components/DatePicker';
+import Datepicker from './components/Datepicker';
 import CodeInput from './components/CodeInput';
 import TimeInput from './components/TimeInput';
 import NumberInput from './components/NumberInput';
@@ -15,7 +17,7 @@ import Modal from './components/Modal';
 export {default as Autocomplete} from './components/Autocomplete';
 export {default as Dropdown} from './components/Dropdown';
 export {default as Avatar} from './components/Avatar';
-export {default as DatePicker} from './components/DatePicker';
+export {default as Datepicker} from './components/Datepicker';
 export {default as CodeInput} from './components/CodeInput';
 export {default as TimeInput} from './components/TimeInput';
 export {default as NumberInput} from './components/NumberInput';
@@ -34,7 +36,7 @@ export const Slate = {
     Vue.use(Autocomplete);
     Vue.use(Avatar);
     Vue.use(Dropdown);
-    Vue.use(DatePicker);
+    Vue.use(Datepicker);
     Vue.use(CodeInput);
     Vue.use(TimeInput);
     Vue.use(NumberInput);
