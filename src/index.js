@@ -9,7 +9,7 @@ import TimeInput from '../components/TimeInput';
 import NumberInput from '../components/NumberInput';
 import Notifications from '../components/Notifications';
 import Modal from '../components/Modal';
-import Tooltip from './components/Tooltip';
+import Tooltip from '../components/Tooltip';
 
 export default Slate = {
   install: function (Vue,opt) {
