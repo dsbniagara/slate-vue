@@ -9,8 +9,9 @@ import TimeInput from '../components/TimeInput';
 import NumberInput from '../components/NumberInput';
 import Notifications from '../components/Notifications';
 import Modal from '../components/Modal';
+import Tooltip from './components/Tooltip';
 
-export const Slate = {
+export default Slate = {
   install: function (Vue,opt) {
     if (Vue._slate_installed) {
       return;
@@ -26,6 +27,7 @@ export const Slate = {
     Vue.use(NumberInput);
     Vue.use(Notifications);
     Vue.use(Modal);
+    Vue.use(Tooltip);
   }
 }
 
