@@ -11,7 +11,7 @@ import Notifications from '../components/Notifications';
 import Modal from '../components/Modal';
 import Tooltip from '../components/Tooltip';
 
-export default Slate = {
+const Slate = {
   install: function (Vue,opt) {
     if (Vue._slate_installed) {
       return;
@@ -30,5 +30,7 @@ export default Slate = {
     Vue.use(Tooltip);
   }
 }
+
+export default Slate;
 
 vueUse(Slate);

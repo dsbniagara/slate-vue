@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import {Slate} from '../src/index.js';
+import Slate from '../src/index.js';
 import Demo from './Demo';
 import Docs from './Docs';
 import routes from './routes'

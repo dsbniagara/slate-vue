@@ -81,7 +81,7 @@ export default {
     }
 }
 </script>
-<style lang="postcss">
+<style lang="scss">
 .demo-preview { 
     margin-bottom: 60px;
 }
