@@ -2,7 +2,7 @@
   <section class="hero text-center">
         <h1>A Modern <b>UI System</b></h1>
         <p>Slate is a small front end framework for building reusable interfaces.</p>
-        <a href="/docs">Get started</a>
+        <router-link :to="{name:'docs'}">Get started</router-link>
         <div class="rectangular-plane">
             <div class="rectangular-group">
                 <div class="rectangle rectangle--xl rectangle--outline"></div>

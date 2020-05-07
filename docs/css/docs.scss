@@ -92,6 +92,8 @@ section.hero {
         right: 20%;
         bottom: 0;
         transform: rotate(-13deg);
+        user-select: none;
+        pointer-events: none;
 
         .rectangular-group {
             position: absolute;

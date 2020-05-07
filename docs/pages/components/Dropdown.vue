@@ -1,7 +1,7 @@
 <template>
 <div>
 
-<pre class="code">import { Dropdown } from `@dsbn/slate-vue`</pre>
+<pre class="code">import Dropdown from '@dsbn/slate-vue/component/Dropdown'</pre>
 
 <demo title="Button dropdown" code='<dropdown text="Dropdown">
     <a class="dropdown-item" href="#">Item 1</a>

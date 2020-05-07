@@ -11,7 +11,7 @@
      <h2>Cherry picking</h2>
 
      <p>Just what you need</p>
-     <pre class="code">import Dropdown from '@dsbn/slate-vue/components/Dropdown'
-import Notifications from '@dsbn/slate-vue/components/Notifications'</pre>
+     <pre class="code">import Dropdown from '@dsbn/slate-vue/component/Dropdown'
+import Notifications from '@dsbn/slate-vue/component/Notifications'</pre>
  </section> 
 </template>
