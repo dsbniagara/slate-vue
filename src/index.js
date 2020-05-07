@@ -1,15 +1,15 @@
 import { vueUse } from './utils/plugins';
 
-import Autocomplete from '../components/Autocomplete';
-import Dropdown from '../components/Dropdown';
-import Avatar from '../components/Avatar';
-import Datepicker from '../components/Datepicker';
-import CodeInput from '../components/CodeInput';
-import TimeInput from '../components/TimeInput';
-import NumberInput from '../components/NumberInput';
-import Notifications from '../components/Notifications';
-import Modal from '../components/Modal';
-import Tooltip from '../components/Tooltip';
+import Autocomplete from '../component/Autocomplete';
+import Dropdown from '../component/Dropdown';
+import Avatar from '../component/Avatar';
+import Datepicker from '../component/Datepicker';
+import CodeInput from '../component/CodeInput';
+import TimeInput from '../component/TimeInput';
+import NumberInput from '../component/NumberInput';
+import Notifications from '../component/Notifications';
+import Modal from '../component/Modal';
+import Tooltip from '../component/Tooltip';
 
 const Slate = {
   install: function (Vue,opt) {
