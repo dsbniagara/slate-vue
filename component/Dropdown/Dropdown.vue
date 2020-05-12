@@ -34,6 +34,10 @@ export default {
         autoClose: {
             type: Boolean,
             default: true,
+        },
+        events: {
+            type: Boolean,
+            default: true,
         }
     },
     data() {
@@ -157,12 +161,16 @@ export default {
             this.hide(e);
         },
         addEvents(){
-            window.addEventListener('click', this.closeOutside);
-            window.addEventListener('keydown', this.keyDown);
+            if( this.events ) {
+                window.addEventListener('click', this.closeOutside);
+                window.addEventListener('keydown', this.keyDown);
+            }
         },
         removeEvents(){
-            window.removeEventListener('click', this.closeOutside);
-            window.removeEventListener('keydown', this.keyDown);
+            if( this.events ) {
+                window.removeEventListener('click', this.closeOutside);
+                window.removeEventListener('keydown', this.keyDown);
+            }
         }
     }
 }

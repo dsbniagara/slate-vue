@@ -3,7 +3,7 @@
     <header class="main-header container-fluid row">
         <router-link class="brand" :to="{name:'docs'}">slate-vue</router-link>
         
-        <span class="badge badge--primary">0.1.0-alpha.8</span>
+        <span class="badge badge--primary">0.1.0-alpha.9</span>
         <nav class="nav nav@xs">
             <ul class="nav-items">
                 <li class="nav-item"><router-link :to="{name:'docs'}" class="nav-link">Docs</router-link></li>
