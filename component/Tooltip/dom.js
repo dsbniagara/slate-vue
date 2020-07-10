@@ -7,6 +7,16 @@ const zIndex = 4000; // 默认的 z-index 值
 const refs = {};
 let tooltipId = 0;
 
+const isServer = Vue.prototype.$isServer;
+const ieVersion = isServer ? 0 : Number(document.documentMode);
+
+/* istanbul ignore next */
+const camelCase = function(name) {
+  return name.replace(SPECIAL_CHARS_REGEXP, function(_, separator, letter, offset) {
+    return offset ? letter.toUpperCase() : letter;
+  }).replace(MOZ_HACK_REGEXP, 'Moz$1');
+};
+
 /**
  * create tooltip
  * @param {HTMLElement} el
@@ -87,3 +97,44 @@ export function tooltipUpdateTitle(el, title) {
     tooltip.updateTitleContent(title);
   }
 }
+
+
+export function getStyleToInt(elem, attribute) {
+  return parseInt(getStyle(elem, attribute), 10) || 0;
+}
+
+export const getStyle = ieVersion < 9 ? function(element, styleName) {
+  if (isServer) return;
+  if (!element || !styleName) return null;
+  styleName = camelCase(styleName);
+  if (styleName === 'float') {
+    styleName = 'styleFloat';
+  }
+  try {
+    switch (styleName) {
+      case 'opacity':
+        try {
+          return element.filters.item('alpha').opacity / 100;
+        } catch (e) {
+          return 1.0;
+        }
+      default:
+        return (element.style[styleName] || element.currentStyle ? element.currentStyle[styleName] : null);
+    }
+  } catch (e) {
+    return element.style[styleName];
+  }
+} : function(element, styleName) {
+  if (isServer) return;
+  if (!element || !styleName) return null;
+  styleName = camelCase(styleName);
+  if (styleName === 'float') {
+    styleName = 'cssFloat';
+  }
+  try {
+    var computed = document.defaultView.getComputedStyle(element, '');
+    return element.style[styleName] || computed ? computed[styleName] : null;
+  } catch (e) {
+    return element.style[styleName];
+  }
+};
