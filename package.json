@@ -16,7 +16,7 @@
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.0.0",
     "autoprefixer": "^9.6.1",
-    "highlight.js": "^9.15.9",
+    "highlight.js": "^10.1.2",
     "parcel-bundler": "^1.12.3",
     "sass": "^1.26.5",
     "throttle-debounce": "^2.1.0",
