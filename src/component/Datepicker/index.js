@@ -1,5 +1,5 @@
 import Datepicker from './Datepicker.vue';
-import { registerComponents } from '../../src/utils/plugins';
+import { registerComponents } from '../../utils/plugins';
 
 const VuePlugin = {
   install (Vue) {

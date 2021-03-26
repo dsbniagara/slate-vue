@@ -1,5 +1,5 @@
 import Dropdown from './Dropdown.vue'
-import { registerComponents } from '../../src/utils/plugins'
+import { registerComponents } from '../../utils/plugins'
 
 
 const VuePlugin = {

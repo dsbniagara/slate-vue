@@ -1,28 +1,28 @@
 import { vueUse } from './utils/plugins';
 
-// import Autocomplete from './components/Autocomplete';
-import Dropdown from './components/Dropdown';
-import Avatar from './components/Avatar';
-import DatePicker from './components/DatePicker';
-import CodeInput from './components/CodeInput';
-import TimeInput from './components/TimeInput';
-import NumberInput from './components/NumberInput';
-import Notifications from './components/Notifications';
-import Modal from './components/Modal';
-// import Affix from './components/Affix';
-// import Sidebar from './components/Sidebar';
+// import Autocomplete from './component/Autocomplete';
+import Dropdown from './component/Dropdown';
+import Avatar from './component/Avatar';
+import DatePicker from './component/DatePicker';
+import CodeInput from './component/CodeInput';
+import TimeInput from './component/TimeInput';
+import NumberInput from './component/NumberInput';
+import Notifications from './component/Notifications';
+import Modal from './component/Modal';
+// import Affix from './component/Affix';
+// import Sidebar from './component/Sidebar';
 
-// export {default as Autocomplete} from './components/Autocomplete';
-export {default as Dropdown} from './components/Dropdown';
-export {default as Avatar} from './components/Avatar';
-export {default as DatePicker} from './components/DatePicker';
-export {default as CodeInput} from './components/CodeInput';
-export {default as TimeInput} from './components/TimeInput';
-export {default as NumberInput} from './components/NumberInput';
-export {default as Notifications} from './components/Notifications';
-export {default as Modal} from './components/Modal';
-// export {default as Affix} from './components/Affix';
-// export {default as Sidebar} from './components/Sidebar';
+// export {default as Autocomplete} from './component/Autocomplete';
+export {default as Dropdown} from './component/Dropdown';
+export {default as Avatar} from './component/Avatar';
+export {default as DatePicker} from './component/DatePicker';
+export {default as CodeInput} from './component/CodeInput';
+export {default as TimeInput} from './component/TimeInput';
+export {default as NumberInput} from './component/NumberInput';
+export {default as Notifications} from './component/Notifications';
+export {default as Modal} from './component/Modal';
+// export {default as Affix} from './component/Affix';
+// export {default as Sidebar} from './component/Sidebar';
 
 export const Slate = {
   install: function (Vue,opt) {
