@@ -1,8 +1,8 @@
 module.exports = [
-  'intro',
   {
     title: 'Getting Started',
     children: [
+      'getting-started/intro',
       'getting-started/installation',
     ]
   },

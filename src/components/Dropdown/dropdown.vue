@@ -1,9 +1,9 @@
 <template>
-    <div class="dropdown" :class="position">
-        <button class="btn" :class="classs" ref="button" type="button" @click.stop.prevent="show=!show">
+    <div class="dropdown" :class="{position,'dropdown--visible':visible}">
+        <button class="btn" :class="classs" ref="button" type="button" @click.stop.prevent="toggle()">
             {{text}}<slot name="button"></slot>
         </button>
-        <div ref="dropdown-list" class="dropdown-list" :class="{show:show}">
+        <div ref="dropdown-list" class="dropdown-list" :class="{visible:visible}">
             <slot></slot>
         </div>
     </div>
@@ -18,72 +18,36 @@ export default {
     ],
     data() {
         return {
-            show: false
+            visible: false
         }
     },
     created() {
         document.addEventListener("click",() => {
-            if(this.show) this.show = false;
+            if(this.visible) {
+                this.hide();
+            }
         });
     },
     computed: {
         classs() {
-            if( !this.variant) return 'btn--primary';
-            return 'btn--'+this.variant;
+            if( this.variant == '' ) return '';
+            if( !this.variant) return 'btn btn--primary';
+            return 'btn bzn--'+this.variant;
         }
     },
     methods: {
-        onClose() {
-            this.show = false;
+        show() {
+            this.visible = true;
+            this.$emit('show');
+        },
+        hide() {
+            this.visible = false;
+            this.$emit('hidden');
+        },
+        toggle(){
+            this.visible=!this.visible;
+            this.$emit(this.visible?'show':'hidden');
         }
     }
 }
 </script>
-
-<style>
-
-</style>
-
-<style lang="postcss">
-.dropdown {
-    display: inline-block;
-    position: relative;
-    &.right .dropdown-list {
-        right: 0;
-    }
-    button {
-        border-radius: 6px;
-        display: inline-block;
-        &:focus {
-            outline: 0 none;
-        }
-    }
-    .dropdown-list {
-        min-width: 150px;
-        text-align: left;
-        position: absolute;
-        display: none;
-        background: #fff;
-        box-shadow: var(--shadow-up);
-        border-radius: var(--border-radius);
-        padding: 8px 0;
-        z-index: 999;
-		width: 200px;
-        margin-bottom: 30px;
-        &.show {
-            display: block;
-        } 
-        .dropdown-item {
-			display: flex !important;
-			align-items: flex-end;
-            padding: 8px 20px;
-            color: var(--color-dark);
-            border-radius: 0;
-            &:hover {
-                color: #fff;
-                background-color: var(--color-primary);
-            }
-		}
-	}
-}
-</style>

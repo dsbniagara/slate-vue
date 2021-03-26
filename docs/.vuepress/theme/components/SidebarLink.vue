@@ -102,18 +102,18 @@ a.sidebar-link
   font-size 1em
   font-weight 400
   display inline-block
-  color $textColor
+  color #919A9D
+  font-family urbane, sans-serif
   border-left 0.25rem solid transparent
   padding 0.35rem 1rem 0.35rem 2.25rem
   line-height 1.4
-  width: 100%
-  box-sizing: border-box
+  box-sizing border-box
   &:hover
     color var(--color-primary)
   &.active
-    font-weight 600
-    color var(--color-primary)
-    position relative
+    font-weight 400
+    color #000
+
     &:before
       // content ""
       // display block
@@ -130,5 +130,5 @@ a.sidebar-link
     padding-bottom 0.25rem
     border-left none
     &.active
-      font-weight 500
+      font-weight 400
 </style>

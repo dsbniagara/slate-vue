@@ -96,15 +96,45 @@ export default {
   &.depth-2
     & > .sidebar-heading
       border-left none
-  & > .sidebar-group-items .sidebar-link
-    padding-left 3.4rem
-
+  & > .sidebar-group-items > li 
+    > ul > li > a.sidebar-link
+      font-size .85rem
+    a.sidebar-link
+      margin 0 1.25rem
+      padding .5rem 1.25rem
+      border-radius 5px
+      display block
+      border 2px solid transparent
+      font-weight 400
+      &:focus
+        outline none
+        box-shadow 0px 0px 0px 3px #41b88329  
+    > a.sidebar-link.active
+      position relative
+      border 2px solid #e8ebee
+      box-sizing border-box
+      &:focus
+        outline none
+        border 2px solid var(--color-primary)
+        box-shadow 0px 0px 0px 3px #41b88329  
+      &:before 
+        content ""
+        position absolute
+        top 50%
+        left -5px
+        width 10px
+        height 10px
+        border-radius 10px
+        background var(--color-primary)
+      
 .sidebar-heading
-  // color $textColor
+  color #2D3D43
+  font-weight 600
   transition color .15s ease
   cursor pointer
-  // text-transform uppercase
-  padding 0.35rem 1.5rem 0.35rem 2.25rem
+  font-family urbane, sans-serif
+  text-transform uppercase
+  padding 0.65rem 1.5rem 0.65rem 2.25rem
   width 100%
   box-sizing border-box
   margin 0
@@ -124,5 +154,4 @@ export default {
 .sidebar-group-items
   transition height .1s ease-out
   font-size 0.95em
-  overflow hidden
 </style>

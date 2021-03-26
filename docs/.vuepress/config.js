@@ -17,7 +17,11 @@ module.exports = {
         ['link', {
             rel: 'icon',
             href: '/favicon.png'
-        }]
+        }],
+        ['link', {
+            rel: 'stylesheet',
+            href: 'https://use.typekit.net/ncf6bsd.css'
+        }],
     ],
     themeConfig: {
         packageName: '@dsbn/slate-vue',
@@ -30,7 +34,7 @@ module.exports = {
             selected: versioning.versions.latest,
             all: versioning.versions.all
         },
-        search: false,
+        search: true,
         nav: [
             {
                 text: `Docs`,

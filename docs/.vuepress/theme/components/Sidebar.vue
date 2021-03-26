@@ -21,6 +21,32 @@ export default {
 </script>
 
 <style lang="stylus">
+@require '../styles/config'
+
+.sidebar-mask
+  position fixed
+  z-index 9
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  display none
+
+.sidebar
+  font-size 16px
+  background-color #fff
+  width $sidebarWidth
+  position fixed
+  z-index 10
+  margin 0
+  top 0
+  padding-top $navbarHeight
+  left 0
+  bottom 0
+  box-sizing border-box
+  border-right 4px solid #eaecef45
+  overflow-y auto
+
 .sidebar
   ul
     padding 0
@@ -44,7 +70,6 @@ export default {
       line-height 1.7
     & > li > a.sidebar-link,
     & > li > .sidebar-group > .sidebar-heading 
-      font-weight 500
 
     & > li:not(:first-child)
       margin-top .75rem

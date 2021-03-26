@@ -167,6 +167,7 @@ export default {
 </script>
 <style lang="postcss">
 .autocomplete {
+    background: var(--color-primary);
     position: relative;
     .form-input {
         padding: .8rem 1rem;
