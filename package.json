@@ -1,15 +1,13 @@
 {
   "name": "@dsbn/slate-vue",
-  "version": "0.1.0-alpha.10",
+  "version": "0.1.0-alpha.13",
   "description": "Slate-vue is a Vue app component library built with @dsbn/slate-css",
   "repository": "https://github.com/dsbniagara/slate-vue",
   "main": "src/index.js",
   "style": "build/slate.min.css",
   "scripts": {
-    "docs": "parcel --port=1235 --no-cache docs/index.html",
-    "docs:build": "parcel build --no-cache docs/index.html",
     "build": "npm run prepublishOnly",
-    "prepublishOnly": "parcel build ./src/build.js --no-cache --out-dir build --out-file slate.min.js"
+    "prepublishOnly": "parcel build ./src/build.js --no-cache --no-source-maps --out-dir build --out-file slate.min.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,20 +16,23 @@
     "autoprefixer": "^9.6.1",
     "highlight.js": "^9.15.9",
     "parcel-bundler": "^1.12.3",
-    "sass": "^1.26.5",
+    "postcss-color-function": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-modules": "^1.4.1",
+    "postcss-nested": "^4.1.2",
+    "sass": "^1.32.8",
     "throttle-debounce": "^2.1.0",
-    "vue-router": "^3.1.6",
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "@dsbn/slate-css": "0.1.0-alpha.5",
     "content": "^4.0.6",
     "effects": "0.0.5",
     "mixin": "^0.2.0",
-    "tooltip.js": "^1.3.3",
+    "postcss-values-parser": "^3.0.5",
     "variables": "^1.0.1",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3",
+    "vue-router": "^3.0.6",
     "vuejs-datepicker": "^1.5.4"
   }
 }
