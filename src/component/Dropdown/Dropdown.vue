@@ -178,49 +178,4 @@ export default {
 
 
 <style lang="scss">
-:root {
-    --shadow-up: 0 6px 9px #0000001f, 0 2px 5px #0000000f;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-
-    &.right .dropdown-list {
-        right: 0;
-    }
-    .btn {
-        box-shadow: none;
-        display: inline-block;
-        &:focus {
-            outline: 0 none;
-        }
-    }
-    .dropdown-list {
-        min-width: 150px;
-        text-align: left;
-        position: absolute;
-        background: #fff;
-        box-shadow: var(--shadow-up);
-        border-radius: 4px;
-        padding: 8px 0;
-        z-index: 800;
-        top: 100%;
-        display: none;
-
-        .dropdown-item {
-			display: flex !important;
-			align-items: flex-end;
-            padding: 8px 20px;
-            color: var(--color-text);
-            border-radius: 0;
-            &:hover {
-                color: #fff;
-                background-color: var(--color-primary);
-            }
-            &:focus {
-                box-shadow: var(--box-shadow-input-active);
-            }
-		}
-	}
-}
 </style>
