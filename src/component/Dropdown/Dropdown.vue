@@ -56,6 +56,7 @@ export default {
             let classes = []
             if( this.visible ) classes.push('dropdown--visible')
             if( this.position == 'right' ) classes.push('dropdown--right')
+            if( this.position == 'center' ) classes.push('dropdown--center')
             return classes.join(' ')
         },
         classesBtn() {
@@ -92,35 +93,10 @@ export default {
             this.visible = true;
             this.addEvents();
             this.$emit('show',this.$el);
-            this.style = { display: 'block', opacity: 0}; // display it, so we can calculate boundaries
-            this.$nextTick(this.adjust);
-        },
-        adjust() {
-            var scrollBarWidth = 28;
-            var target = this.$el.getBoundingClientRect();
-            var element = this.$refs.list.getBoundingClientRect();
-            var view = {width:window.innerWidth,height:window.innerHeight};
-            var scroll = {x:window.scrollX,y:window.scrollY};
-            var x = 'start';
-            var y = 'below';
-            var viewBottom = scroll.y+view.height;
-            var elementBottom = element.y+element.height ;
-            if( viewBottom-elementBottom > 0 && elementBottom > viewBottom ) {
-                y = 'above';
-            }
-            if( scroll.x+view.width < element.x+element.width ) {
-                x = 'end';
-            }
-            this.style = { display: 'block', top: 'auto', left: 'auto', right: 'auto', bottom: 'auto'};
-            if( x == 'start' ) this.style.left = '0px';
-            if( x == 'end' ) this.style.right = '0px';
-            if( y == 'above' ) this.style.bottom = target.height + 'px';
-            if( y == 'below' ) this.style.top = target.height + 'px';
         },
         hide(e) {
             this.removeEvents();
             this.visible = false;
-            this.style = { display: 'none'}; 
             this.$emit('hide',this.$el);
         },
         toggle(e){
@@ -179,7 +155,6 @@ export default {
     }
 }
 </script>
-
 
 <style lang="scss">
 </style>
