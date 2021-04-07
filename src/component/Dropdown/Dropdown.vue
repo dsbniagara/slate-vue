@@ -3,10 +3,7 @@
         <button :class="classesBtn" ref="button" type="button" @click="click" @mouseover="mouseover">
             <slot name="button">{{text}}</slot>
         </button>
-        <div 
-            ref="list" 
-            class="dropdown-list" 
-            :style="style">
+        <div ref="list" class="dropdown-list">
             <slot></slot>
         </div>
     </div>
@@ -41,7 +38,7 @@ export default {
         },
         position: {
             type: String,
-            default: 'right',
+            default: 'left',
         }
     },
     data() {
@@ -56,7 +53,10 @@ export default {
     },
     computed: {
         classes() {
-            return (this.visible ? 'dropdown--visible' : '' ) + (this.position == 'right' ? 'dropdown--right' : '' );
+            let classes = []
+            if( this.visible ) classes.push('dropdown--visible')
+            if( this.position == 'right' ) classes.push('dropdown--right')
+            return classes.join(' ')
         },
         classesBtn() {
             if( this.btn && this.btn != '' ) return 'btn btn--'+this.btn;
