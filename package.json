@@ -1,38 +1,26 @@
 {
   "name": "@dsbn/slate-vue",
-  "version": "0.1.0-alpha.15",
+  "version": "0.1.0-alpha.18",
   "description": "Slate-vue is a Vue app component library built with @dsbn/slate-css",
   "repository": "https://github.com/dsbniagara/slate-vue",
-  "main": "src/index.js",
-  "style": "build/slate.min.css",
+  "main": "dist/slate-vue.umd.js",
+  "module": "dist/slate-vue.esm.js",
+  "unpkg": "dist/slate-vue.min.js",
   "scripts": {
     "build": "npm run prepublishOnly",
-    "prepublishOnly": "parcel build ./src/build.js --no-cache --no-source-maps --out-dir build --out-file slate.min.js"
+    "prepublishOnly": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/slate-vue.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/slate-vue.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/slate-vue.min.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@vue/component-compiler-utils": "^3.0.0",
-    "autoprefixer": "^9.6.1",
-    "highlight.js": "^9.15.9",
-    "parcel-bundler": "^1.12.3",
-    "postcss-color-function": "^4.1.0",
-    "postcss-import": "^12.0.1",
-    "postcss-modules": "^1.4.1",
-    "postcss-nested": "^4.1.2",
-    "sass": "^1.32.8",
-    "throttle-debounce": "^2.1.0",
-    "vue-template-compiler": "^2.6.10"
-  },
   "dependencies": {
-    "content": "^4.0.6",
-    "effects": "0.0.5",
-    "mixin": "^0.2.0",
-    "postcss-values-parser": "^3.0.5",
-    "variables": "^1.0.1",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-vue": "^5.0.1",
     "vue": "^2.6.10",
-    "vue-hot-reload-api": "^2.3.3",
-    "vue-router": "^3.0.6",
-    "vuejs-datepicker": "^1.5.4"
+    "vue-template-compiler": "^2.6.10"
   }
 }

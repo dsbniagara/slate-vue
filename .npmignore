@@ -1,4 +1,4 @@
-docs
-docs-old
-dist
 netlify.toml
+build
+src
+package-lock.json

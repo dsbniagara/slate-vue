@@ -38,6 +38,10 @@ export default {
         events: {
             type: Boolean,
             default: true,
+        },
+        position: {
+            type: String,
+            default: 'right',
         }
     },
     data() {
@@ -52,7 +56,7 @@ export default {
     },
     computed: {
         classes() {
-            return (this.visible ? 'dropdown--visible' : '' ) ;
+            return (this.visible ? 'dropdown--visible' : '' ) + (this.position == 'right' ? 'dropdown--right' : '' );
         },
         classesBtn() {
             if( this.btn && this.btn != '' ) return 'btn btn--'+this.btn;
