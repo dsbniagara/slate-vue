@@ -1,6 +1,6 @@
 import Tooltip from './tooltip';
 
-require('./style.css');
+import './style.css';
 
 // tooltip utils
 export {

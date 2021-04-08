@@ -9,6 +9,7 @@ import TimeInput from './component/TimeInput';
 import NumberInput from './component/NumberInput';
 import Notifications from './component/Notifications';
 import Modal from './component/Modal';
+import Tooltip from './component/Tooltip';
 // import Affix from './component/Affix';
 // import Sidebar from './component/Sidebar';
 
@@ -21,6 +22,7 @@ export {default as TimeInput} from './component/TimeInput';
 export {default as NumberInput} from './component/NumberInput';
 export {default as Notifications} from './component/Notifications';
 export {default as Modal} from './component/Modal';
+export {default as Tooltip} from './component/Tooltip';
 // export {default as Affix} from './component/Affix';
 // export {default as Sidebar} from './component/Sidebar';
 
@@ -40,6 +42,7 @@ export const Slate = {
     Vue.use(NumberInput);
     Vue.use(Notifications);
     Vue.use(Modal);
+    Vue.use(Tooltip);
 
     // Vue.use(Affix);
   }
