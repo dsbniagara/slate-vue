@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import Tooltip from 'tooltip.js';
 
 // 依赖 element-ui 的 tooltip 样式，在 element-ui.js 中单独引入
