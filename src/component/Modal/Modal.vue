@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-backdrop" :class="{show:shouldShow}" @click.self="onClose">
+    <div class="modal-backdrop" :class="{show:shouldShow}" @click.self="hide()">
         <div ref="modal" class="modal">
             <button class="close" type="button" @click="hide()"><svg height="16" id="svg2" version="1.1" width="16"><defs id="defs4"/><g transform="translate(0,-1036.3622)"><path d="m 2,1050.3622 12,-12" id="path2985"  class="stroke" style="fill:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/><path class="stroke" d="m 2,1038.3622 12,12" style="fill:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/></g></svg></button>
             <header v-if="hasHeader">
@@ -43,9 +43,6 @@ export default {
         },
         dontClose(e){
             return false;
-        },
-        onClose() {
-            this.shouldShow = false;
         }
     }
 }
